@@ -105,7 +105,7 @@ namespace Epifanov_program
 
         public void Save()
         {
-            string path = $"{Path.GetDirectoryName(Assembly.GetEntryAssembly().Location)}\\Persons.txt";
+            string path = $"{Path.GetDirectoryName(Assembly.GetEntryAssembly().Location)}\\Books.txt";
             using (StreamWriter writer = new StreamWriter(File.Open(path, FileMode.Create)))
             {
                 foreach (Book book in books)
