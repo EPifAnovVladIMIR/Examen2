@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bigna\\OneDrive\\Рабочий стол\\Epifanov_program\\Epifanov_program\\Epifanov_program.csproj",
+      "projectUniqueName": "C:\\Users\\bigna\\OneDrive\\Документы\\GitHub\\Examen2\\Epifanov_program\\Epifanov_program\\Epifanov_program.csproj",
       "projectName": "Epifanov_program",
-      "projectPath": "C:\\Users\\bigna\\OneDrive\\Рабочий стол\\Epifanov_program\\Epifanov_program\\Epifanov_program.csproj",
+      "projectPath": "C:\\Users\\bigna\\OneDrive\\Документы\\GitHub\\Examen2\\Epifanov_program\\Epifanov_program\\Epifanov_program.csproj",
       "packagesPath": "C:\\Users\\bigna\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bigna\\OneDrive\\Рабочий стол\\Epifanov_program\\Epifanov_program\\obj\\",
+      "outputPath": "C:\\Users\\bigna\\OneDrive\\Документы\\GitHub\\Examen2\\Epifanov_program\\Epifanov_program\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bigna\\AppData\\Roaming\\NuGet\\NuGet.Config",
