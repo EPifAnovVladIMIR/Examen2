@@ -15,6 +15,8 @@ namespace Epifanov_program
     {
         public static void Main(string[] args)
         {
+
+
             bool refresh = true;
 
 
@@ -71,15 +73,6 @@ namespace Epifanov_program
         
         public Book[] books;
         public BookControl(int size) => books = new Book[size];
-        /*
-                public ElementsBook(int FullInfos)
-                {
-                    this.Elements = FullInfos;
-                    FullInfo = new Book[FullInfos];
-                }
-        */
-
-
 
         public void Fill() // Функция диаологового заполнения
         {
@@ -107,14 +100,10 @@ namespace Epifanov_program
         public void ViewBooks()
         {
             foreach (Book book in books)
-                Console.WriteLine($"Жанр: {book.Janr} Название книги: {book.Name} Автор: {book.Author}");
+                Console.WriteLine($"Жанр: {book.Janr} Автор: {book.Author} Название книги: {book.Name}");
         }
 
-
-
-        
-
-        public void Sort() 
+        public void Sort()
         {
             Book buf;
             for (int i = 0; i < books.Length; i++)
@@ -150,9 +139,6 @@ namespace Epifanov_program
         }
 
 
-
-
-
         public void Save(string filePuth)
         {
 
@@ -160,9 +146,9 @@ namespace Epifanov_program
             {
                 foreach (Book book in books)
                 {
-                    Console.WriteLine($"Автор: {book.Author} Название: {book.Name} Жанр: {book.Janr}");
+                    Console.WriteLine($"Жанр: {book.Janr} Автор: {book.Author} Название: {book.Name}");
 
-                    writer.WriteLine(book.Author + "," + book.Name + "," + book.Janr);
+                    writer.WriteLine("Автор: " + book.Author + " Название: " + book.Name + " Жанр: " + book.Janr);
                 }
             }
         }
