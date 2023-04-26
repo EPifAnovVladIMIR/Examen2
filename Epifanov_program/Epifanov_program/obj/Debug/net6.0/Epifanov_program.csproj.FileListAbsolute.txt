@@ -1,0 +1,15 @@
+C:\Users\bigna\OneDrive\Документы\GitHub\Examen2\Epifanov_program\Epifanov_program\bin\Debug\net6.0\Epifanov_program.exe
+C:\Users\bigna\OneDrive\Документы\GitHub\Examen2\Epifanov_program\Epifanov_program\bin\Debug\net6.0\Epifanov_program.deps.json
+C:\Users\bigna\OneDrive\Документы\GitHub\Examen2\Epifanov_program\Epifanov_program\bin\Debug\net6.0\Epifanov_program.runtimeconfig.json
+C:\Users\bigna\OneDrive\Документы\GitHub\Examen2\Epifanov_program\Epifanov_program\bin\Debug\net6.0\Epifanov_program.dll
+C:\Users\bigna\OneDrive\Документы\GitHub\Examen2\Epifanov_program\Epifanov_program\bin\Debug\net6.0\Epifanov_program.pdb
+C:\Users\bigna\OneDrive\Документы\GitHub\Examen2\Epifanov_program\Epifanov_program\obj\Debug\net6.0\Epifanov_program.csproj.AssemblyReference.cache
+C:\Users\bigna\OneDrive\Документы\GitHub\Examen2\Epifanov_program\Epifanov_program\obj\Debug\net6.0\Epifanov_program.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bigna\OneDrive\Документы\GitHub\Examen2\Epifanov_program\Epifanov_program\obj\Debug\net6.0\Epifanov_program.AssemblyInfoInputs.cache
+C:\Users\bigna\OneDrive\Документы\GitHub\Examen2\Epifanov_program\Epifanov_program\obj\Debug\net6.0\Epifanov_program.AssemblyInfo.cs
+C:\Users\bigna\OneDrive\Документы\GitHub\Examen2\Epifanov_program\Epifanov_program\obj\Debug\net6.0\Epifanov_program.csproj.CoreCompileInputs.cache
+C:\Users\bigna\OneDrive\Документы\GitHub\Examen2\Epifanov_program\Epifanov_program\obj\Debug\net6.0\Epifanov_program.dll
+C:\Users\bigna\OneDrive\Документы\GitHub\Examen2\Epifanov_program\Epifanov_program\obj\Debug\net6.0\refint\Epifanov_program.dll
+C:\Users\bigna\OneDrive\Документы\GitHub\Examen2\Epifanov_program\Epifanov_program\obj\Debug\net6.0\Epifanov_program.pdb
+C:\Users\bigna\OneDrive\Документы\GitHub\Examen2\Epifanov_program\Epifanov_program\obj\Debug\net6.0\Epifanov_program.genruntimeconfig.cache
+C:\Users\bigna\OneDrive\Документы\GitHub\Examen2\Epifanov_program\Epifanov_program\obj\Debug\net6.0\ref\Epifanov_program.dll
