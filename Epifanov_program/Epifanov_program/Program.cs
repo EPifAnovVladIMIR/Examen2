@@ -36,8 +36,7 @@ namespace Epifanov_program
                     Console.WriteLine("Отсортированныый массив.");
                     bookcontrol.Sort();
                     bookcontrol.ViewBooks();
-
-                    Console.WriteLine("Массив сохранен!");
+ 
                     bookcontrol.Save("Books.txt");
                     refresh = false;
                 }
@@ -164,7 +163,8 @@ namespace Epifanov_program
 
         public void Save(string filePuth)
         {
-
+            Console.WriteLine("Сохранение");
+            Console.WriteLine("- - - - - - - - - - -");
             using (StreamWriter writer = new StreamWriter(filePuth))
             {
                 foreach (Book book in books)
