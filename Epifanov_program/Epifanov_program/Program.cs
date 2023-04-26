@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
+
 namespace Epifanov_program
 {
     public class Program
@@ -35,7 +36,7 @@ namespace Epifanov_program
                     bookcontrol.ViewBooks();
 
                     Console.WriteLine("Массив сохранен.");
-                    bookcontrol.Save();
+                    bookcontrol.Save("Books.txt");
                     refresh = false;
                 }
                 catch
@@ -111,17 +112,58 @@ namespace Epifanov_program
 
 
 
-        public void Sort() => Array.Sort(books, (x, y) => (x.Janr + " " + x.Author + "" + x.Name).CompareTo(y.Janr + " " + y.Author + " " + y.Name));
+        
 
-
-
-        public void Save()
+        public void Sort() 
         {
-            string path = $"{Path.GetDirectoryName(Assembly.GetEntryAssembly().Location)}\\Books.txt";
-            using (StreamWriter writer = new StreamWriter(File.Open(path, FileMode.Create)))
+            Book buf;
+            for (int i = 0; i < books.Length; i++)
+            {
+                for (int j = 0; j < books.Length; j++)
+                {
+                    if (books[i].Name.ToLower().CompareTo(books[j].Name.ToLower()) < 0)
+                    {
+                        buf = books[i];
+                        books[i] = books[j];
+                        books[j] = buf;
+                    }
+                    else if (books[i].Name.ToLower().CompareTo(books[j].Name.ToLower()) == 0)
+                    {
+                        if (books[i].Janr.ToLower().CompareTo(books[j].Janr.ToLower()) < 0)
+                        {
+                            buf = books[i];
+                            books[i] = books[j];
+                            books[j] = buf;
+                        }
+                        else if (books[i].Janr.ToLower().CompareTo(books[j].Janr.ToLower()) == 0)
+                        {
+                            if (books[i].Author.ToLower().CompareTo(books[j].Author.ToLower()) < 0)
+                            {
+                                buf = books[i];
+                                books[i] = books[j];
+                                books[j] = buf;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+
+        public void Save(string filePuth)
+        {
+
+            using (StreamWriter writer = new StreamWriter(filePuth))
             {
                 foreach (Book book in books)
+                {
                     Console.WriteLine($"Автор: {book.Author} Название: {book.Name} Жанр: {book.Janr}");
+
+                    writer.WriteLine(book.Author + "," + book.Name + "," + book.Janr);
+                }
             }
         }
     }
