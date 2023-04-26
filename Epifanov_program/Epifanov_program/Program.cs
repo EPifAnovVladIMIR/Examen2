@@ -13,24 +13,36 @@ namespace Epifanov_program
     public class Program
     {
         public static void Main(string[] args)
-        {  
-            while(true)
+        {
+            bool refresh = true;
+
+
+            while (refresh)
             {
-                
+                try
+                {
+
                     Console.Write("Введите размер массива Book: ");
                     int size = Convert.ToInt32(Console.ReadLine());
                     BookControl bookcontrol = new BookControl(size);
 
                     Console.WriteLine($"Введите {size} элементов массива.");
                     bookcontrol.Fill();
-                    
+
 
                     Console.WriteLine("Отсортированныый массив.");
                     bookcontrol.Sort();
                     bookcontrol.ViewBooks();
 
                     Console.WriteLine("Массив сохранен.");
-                    bookcontrol.Save(); 
+                    bookcontrol.Save();
+                    refresh = false;
+                }
+                catch
+                {
+                    Console.WriteLine("Ошибка!");
+                    refresh = true;
+                }
             }
         }
     }
