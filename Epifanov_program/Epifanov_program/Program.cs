@@ -68,7 +68,7 @@ namespace Epifanov_program
 
     public class BookControl
     {
-        // Хранение массива, сортировки и вывода в файл. Работает с классом PrintToFile
+        
 
         
         public Book[] books;
