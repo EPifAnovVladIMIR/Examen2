@@ -37,7 +37,7 @@ namespace Epifanov_program
                     bookcontrol.Sort();
                     bookcontrol.ViewBooks();
 
-                    Console.WriteLine("Массив сохранен.");
+                    Console.WriteLine("Массив сохранен!");
                     bookcontrol.Save("Books.txt");
                     refresh = false;
                 }
@@ -106,37 +106,60 @@ namespace Epifanov_program
         public void Sort()
         {
             Book buf;
+            bool isSorted = false;
             for (int i = 0; i < books.Length; i++)
             {
-                for (int j = 0; j < books.Length; j++)
+                for (int j = 0; j < books.Length - 1; j++)
                 {
-                    if (books[i].Name.ToLower().CompareTo(books[j].Name.ToLower()) < 0)
+                    for (int symbol = 0; symbol < books[j].Janr.Length; symbol++)
                     {
-                        buf = books[i];
-                        books[i] = books[j];
-                        books[j] = buf;
-                    }
-                    else if (books[i].Name.ToLower().CompareTo(books[j].Name.ToLower()) == 0)
-                    {
-                        if (books[i].Janr.ToLower().CompareTo(books[j].Janr.ToLower()) < 0)
+                        if (books[j].Janr[symbol] > books[j + 1].Janr[symbol])
                         {
-                            buf = books[i];
-                            books[i] = books[j];
-                            books[j] = buf;
+                            break;
                         }
-                        else if (books[i].Janr.ToLower().CompareTo(books[j].Janr.ToLower()) == 0)
+                        else if (books[j].Janr[symbol] < books[j + 1].Janr[symbol])
                         {
-                            if (books[i].Author.ToLower().CompareTo(books[j].Author.ToLower()) < 0)
+                            buf = books[j];
+                            books[j] = books[j + 1];
+                            books[j + 1] = buf;
+
+                            break;
+                        }
+                        else
+                        {
+                            if (books[j].Author[symbol] > books[j + 1].Author[symbol])
                             {
-                                buf = books[i];
-                                books[i] = books[j];
-                                books[j] = buf;
+                                break;
+                            }
+                            else if (books[j].Author[symbol] < books[j + 1].Author[symbol])
+                            {
+                                buf = books[j];
+                                books[j] = books[j + 1];
+                                books[j + 1] = buf;
+
+                                break;
+                            }
+                            else
+                            {
+                                if (books[j].Name[symbol] > books[j + 1].Name[symbol])
+                                {
+                                    break;
+                                }
+                                else if (books[j].Name[symbol] < books[j + 1].Name[symbol])
+                                {
+                                    buf = books[j];
+                                    books[j] = books[j + 1];
+                                    books[j + 1] = buf;
+
+                                    break;
+                                }
                             }
                         }
                     }
                 }
             }
         }
+
 
 
         public void Save(string filePuth)
